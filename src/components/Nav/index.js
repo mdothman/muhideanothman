@@ -7,8 +7,18 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">
-        Your personal CMS
+        Home
       </a>
+      <a className="navbar-brand" href="/resume">
+        Resume
+      </a>
+      <a className="navbar-brand" href="/projects">
+        Projects
+      </a>
+      <a className="navbar-brand" href="/contact">
+        Contact Me
+      </a>
+    
       {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
     </nav>
   );

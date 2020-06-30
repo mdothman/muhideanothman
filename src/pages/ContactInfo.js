@@ -2,14 +2,15 @@ import React from "react";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
-const Home = () => {
+const ContactInfo = () => {
   return (
     <Container fluid>
       <Row>
         <Col size="lg-6">
         <Jumbotron>
             <h1>Muhi-Dean Othman</h1>
-            <h2>Determination, Integrity, Creativity</h2>
+           <span>othmanmuhidean@gmail.com</span>
+           <span></span>
           </Jumbotron>
         </Col>
         
@@ -18,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ContactInfo;
