@@ -19,7 +19,7 @@ function Nav() {
         Contact Me
       </a>
     
-      {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
+      {store.loading ? <a className="navbar-brand ml-auto" href="/">Loading...</a> : <></>}
     </nav>
   );
 }
