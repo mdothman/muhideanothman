@@ -38,7 +38,8 @@ const Home = () => {
       </div>
     <Container className={classes.cardGrid} maxWidth="md">
         <Portfolio />
-      </Container></main>
+      </Container>
+      </main>
    
       
 
