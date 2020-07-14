@@ -4,21 +4,23 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.2",
-    "@material-ui/icons":"latest",
+    "@material-ui/icons": "latest",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-swipeable-views":"latest",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-swipeable-views": "latest"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+   "start": "react-app-rewired start",
+   "build": "react-app-rewired build",
+  "test": "react-app-rewired test",
+   "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-transform-imports": "^2.0.0"
   }
 }
