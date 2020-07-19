@@ -6,7 +6,7 @@ import StickyFooter from "./components/StickyFooter"
 import Nav from "./components/Nav";
 import NoMatch from "./pages/NoMatch";
 import { makeStyles } from '@material-ui/core/styles';
-import { StoreProvider } from "./utils/GlobalState";
+
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -21,7 +21,7 @@ function App() {
     <Router>
       <div className="App">
       <div className={classes.root}>
-         <StoreProvider>
+         
           <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -30,7 +30,7 @@ function App() {
               <Route component={NoMatch} />
             </Switch>
             <StickyFooter />
-        </StoreProvider></div>
+      </div>
        
       </div>
     </Router>

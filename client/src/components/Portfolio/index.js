@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import API from "../../utils/API";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,15 +27,48 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-const cards = [1, 2, 3, 4, 5, 6];
+
+
 
 
 export default function Portfolio() {
   const classes = useStyles();
+
+// const [cards,setCards]=useState([]);
+  const [url, setUrl] = useState([]);
+  useEffect(()=>{
+    getGitHubUrl();
+},[])
+
+
+function getGitHubUrl (){
+  API.getRepos()
+  .then(response =>{
+     const data =[]
+     response.data.forEach(element => {
+     data.push(element.html_url)
+    }); 
+    
+    const filteredData = [data[0],data[6],data[20]]
+
+    setUrl(filteredData)
+    
+  })
+  .catch(err=>{console.log(err)})
+}
+console.log(url)
+// function createCard(){
+//     url.forEach(element=>{
+//     setCards(element)
+    
+//   })
+//   console.log(cards)
+  
+// }
   return (
     // <Container className={classes.cardGrid} maxWidth="md">
     <Grid container spacing={4}>
-      {cards.map((card) => (
+      {url.map((card) => (
         <Grid item key={card} xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardMedia
@@ -51,7 +85,7 @@ export default function Portfolio() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" href={card}>
                 View
               </Button>
               <Button size="small" color="primary">
