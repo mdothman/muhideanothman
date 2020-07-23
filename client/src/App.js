@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import ContactInfo from "./pages/ContactInfo";
 import StickyFooter from "./components/StickyFooter"
 import Nav from "./components/Nav";
 import NoMatch from "./pages/NoMatch";
@@ -18,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles()
   return (
+  <> 
     <Router>
       <div className="App">
       <div className={classes.root}>
@@ -25,8 +25,6 @@ function App() {
           <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/contact" component={ContactInfo} />
               <Route component={NoMatch} />
             </Switch>
             <StickyFooter />
@@ -34,7 +32,7 @@ function App() {
        
       </div>
     </Router>
-    
+    </>
   );
 }
 

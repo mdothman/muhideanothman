@@ -1,6 +1,6 @@
 import React from "react";
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
+import HeroUnit from "../components/HeroUnit"
 import Portfolio from '../components/Portfolio'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -26,16 +26,7 @@ const Home = () => {
   const classes = useStyles();
   return (
   <main> 
-    <div className="main"><Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Muhi-Dean Othman
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Determination, Integrity, and Creativity.'}
-        </Typography>
-        <Typography variant="body1">"The best way to predict the future is, to create it." —Abraham Lincoln</Typography>
-      </Container>
-      </div>
+   <HeroUnit className={classes.main} />
     <Container className={classes.cardGrid} maxWidth="md">
         <Portfolio />
       </Container>
