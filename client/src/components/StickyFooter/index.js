@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Paper from "@material-ui/core/Paper"
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,29 +7,16 @@ import {Link,IconButton} from '@material-ui/core/';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://material-ui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-
-
-function copyEmailAddress(e){
-  e.preventDefault();
-  navigator.clipboard.writeText("othmanmuhidean@gmail.com")
-  .then(alert("Email was copied"))
-console.log("The button was clicked")
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
+
+
 
 const useStyles = makeStyles((theme) => ({
  footer: {
@@ -62,6 +49,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function StickyFooter() {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    navigator.clipboard.writeText("othmanmuhidean@gmail.com")
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <Paper className={classes.footer}>
@@ -84,10 +84,17 @@ export default function StickyFooter() {
           </IconButton>
           </Link>
 
-          <IconButton edge="start" onClick={copyEmailAddress}className={classes.gitHubIcon} color="inherit" aria-label="menu">
-          <Typography variant="body1">Copy My Email Address</Typography>
-           <EmailIcon />
-          </IconButton>
+
+      <IconButton aria-label="menu" variant="body1"color="inherit" onClick={handleClick}>
+      <Typography variant="body1">Copy My Email Address</Typography>  
+      <EmailIcon />
+      </IconButton>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          You copied "othmanmuhidean@gmail.com" to your clipboard!
+        </Alert>
+      </Snackbar>
+          
         </Container>
       </div>
    </Paper>

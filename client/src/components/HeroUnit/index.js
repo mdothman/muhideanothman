@@ -16,10 +16,10 @@ return(
 <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Check This Out
+              Full Stack Web Developer
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Click on the images
+              Click on the images to see the live site!
             </Typography>
           </Container>
         </div>

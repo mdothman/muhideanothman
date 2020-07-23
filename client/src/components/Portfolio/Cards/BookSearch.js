@@ -22,7 +22,7 @@ const classes = useStyles();
 return(
     <Grid item xs={12} sm={6} md={4}>
     <Card className={classes.card}>
-    <Link href="*">
+    <Link href="https://ancient-brushlands-65676.herokuapp.com/">
             <CardMedia
               className={classes.cardMedia}
               image="https://source.unsplash.com/random"
@@ -33,11 +33,11 @@ return(
                       Google "Book's"
                     </Typography>
                     <Typography>
-                      Uses React, Mongoose, Node JS, and Express routing fetching google api.
+                      Uses React, Mongoose, Node JS, and Express routing fetching google books api.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="https://github.com/mdothman/mybookshelf">
                       Repository
                     </Button>
                   </CardActions>

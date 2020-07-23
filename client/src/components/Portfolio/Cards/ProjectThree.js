@@ -23,7 +23,7 @@ const classes = useStyles();
 return(
     <Grid item xs={12} sm={6} md={4}>
     <Card className={classes.card}>
-    <Link href="*">
+    <Link href="https://qiktik2.herokuapp.com/">
             <CardMedia
               className={classes.cardMedia}
               image="https://source.unsplash.com/random"
@@ -31,14 +31,14 @@ return(
             /></Link>
              <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      QikTik (Quick Tick 2.0)
+                      Full Stack Group Project (QikTik (2.0))
                     </Typography>
                     <Typography>
-                     Uses React, Mongoose, Node.js, and Express routing.
+                      Uses Sequelize, Node.js, Express Routing, and Handlebars.js
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="https://github.com/mfernandez225/qiktik2.0">
                       Repository
                     </Button>
                   </CardActions>

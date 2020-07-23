@@ -22,7 +22,7 @@ const classes = useStyles();
 return(
     <Grid item xs={12} sm={6} md={4}>
     <Card className={classes.card}>
-    <Link href="*">
+    <Link href="https://afternoon-reef-13754.herokuapp.com/">
             <CardMedia
               className={classes.cardMedia}
               image="https://source.unsplash.com/random"
@@ -37,7 +37,7 @@ return(
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="https://github.com/mdothman/budgetingTracker.git">
                       Repository
                     </Button>
                   </CardActions>
