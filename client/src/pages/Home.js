@@ -3,7 +3,8 @@ import Container from '@material-ui/core/Container';
 import HeroUnit from "../components/HeroUnit"
 import Portfolio from '../components/Portfolio'
 import { makeStyles } from '@material-ui/core/styles';
-
+import Nav from "../components/Nav";
+import StickyFooter from "../components/StickyFooter";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -25,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   return (
-  <main> 
-   <HeroUnit className={classes.main} />
+    <> 
+    <Nav />
+   <HeroUnit />
     <Container className={classes.cardGrid} maxWidth="md">
         <Portfolio />
       </Container>
-      </main>
-   
-      
+   <StickyFooter />
+      </>
 
 
 
