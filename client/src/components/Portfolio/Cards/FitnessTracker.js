@@ -1,6 +1,7 @@
 import React from "react"
 import {Grid, Link,Typography,Button,Card, CardActions, CardContent, CardMedia} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import Fitness from "../Images/Fitness.png";
 
 const useStyles = makeStyles((theme)=>({
     card: {
@@ -25,8 +26,9 @@ return(
     <Link href="https://quiet-river-66262.herokuapp.com/">
             <CardMedia
               className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
-              title="Image title"
+              image={Fitness}
+              alt="Fitness Tracker"
+              title="Fitness Tracker"
             /></Link>
              <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">

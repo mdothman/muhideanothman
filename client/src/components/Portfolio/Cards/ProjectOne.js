@@ -1,6 +1,7 @@
 import React from "react"
 import {Grid, Link,Typography,Button,Card, CardActions, CardContent, CardMedia} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import Chef from "../Images/Chef's.png";
 
 const useStyles = makeStyles((theme)=>({
     card: {
@@ -25,8 +26,9 @@ return(
     <Link href=" https://brianhdz.github.io/Project1/">
             <CardMedia
               className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
-              title="Image title"
+              image={Chef}
+              alt="Recipe Search"
+              title="The Chef's Pick"
             /></Link>
              <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
