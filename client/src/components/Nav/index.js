@@ -31,7 +31,7 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-export default function HideAppBar(props) {
+const Nav = (props) => {
   return (
     <HideOnScroll {...props}>
         <AppBar>
@@ -43,3 +43,4 @@ export default function HideAppBar(props) {
   );
 }
 
+export default Nav

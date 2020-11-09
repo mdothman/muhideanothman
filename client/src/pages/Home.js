@@ -1,11 +1,8 @@
-import React from "react";
-import Container from '@material-ui/core/Container';
-import HeroUnit from "../components/HeroUnit"
-import Portfolio from '../components/Portfolio'
-import { makeStyles } from '@material-ui/core/styles';
-import Nav from "../components/Nav";
-import StickyFooter from "../components/StickyFooter";
+import React from "react"
+import {Nav,HeroUnit,StickyFooter,CodeCard}  from "../components";
+import {Container} from '@material-ui/core';
 
+import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -23,21 +20,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const Home = () =>{
   const classes = useStyles();
-  return (
-    <> 
-    <Nav />
-   <HeroUnit />
-    <Container className={classes.cardGrid} maxWidth="md">
-        <Portfolio />
-      </Container>
-   <StickyFooter />
-      </>
+return(
+<div>
 
-
-
+  <Nav />
+  <HeroUnit />
+  <Container className={classes.cardGrid} width="md">
+    <CodeCard />
+  </Container>
+  <StickyFooter />
+ </div>
 );
 };
 
-export default Home;
+export default Home
