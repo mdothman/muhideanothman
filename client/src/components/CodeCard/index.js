@@ -1,7 +1,7 @@
 import React from "react"
 import {Grid, Link,Typography,Button,Card, CardActions, CardContent, CardMedia} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
-import Books from "../Images/Books.png"
+
 
 const useStyles = makeStyles((theme)=>({
     card: {
@@ -26,7 +26,7 @@ return(
     <Link href="https://ancient-brushlands-65676.herokuapp.com/">
             <CardMedia
               className={classes.cardMedia}
-              image={Books}
+              image='/images/books.png'
               alt="Book search bar"
               title="Google Book's"
             /></Link>

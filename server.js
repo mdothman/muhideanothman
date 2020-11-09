@@ -10,6 +10,7 @@ router.use(function(req, res) {
 
 
 app.use(express.urlencoded({ extended: true }));
+app.use("/public",express.static(path.join(__dirname,"../client/public")))
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

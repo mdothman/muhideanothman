@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
+import {Home,NoMatch} from './pages'
 
-import NoMatch from "./pages/NoMatch";
 import { makeStyles } from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,14 +13,16 @@ const useStyles = makeStyles((theme) => ({
     }}));
 
 
-function App() {
+const App=()=> {
   const classes = useStyles()
   return (
     <Router>
       <div className="App">
       <div className={classes.root}>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/">
+                <Home />
+                </Route>
               <Route component={NoMatch} />
             </Switch>
       </div>

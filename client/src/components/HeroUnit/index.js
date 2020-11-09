@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 
-export default function HeroUnit(){
+const HeroUnit = () =>{
 const classes = useStyles();
 return(
 <div className={classes.heroContent}>
@@ -27,3 +27,4 @@ return(
 
 }
 
+export default HeroUnit
